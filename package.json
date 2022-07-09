@@ -1,11 +1,10 @@
 {
-  "name": "portfolio",
+  "name": "marie-bidenkapp",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "preinstall": "npx npm-force-resolutions",
     "lint": "next lint"
   },
   "dependencies": {

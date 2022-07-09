@@ -1,46 +1,20 @@
 import type { NextPage } from "next";
-import { experiences, mainVariants, NUM_TO_WORD } from "../constants";
+import { experiences, mainVariants } from "../constants";
 import ExternalLink from "../components/ExternalLink";
 import { motion } from "framer-motion";
 import SectionHeading from "../components/SectionHeading";
 import Section from "../components/Section";
 import MetaData from "../components/MetaData";
 import Footer from "../components/Footer";
-import { getDevArticles } from "../utils";
 import { ArticleInList } from "../types";
-import Article from "../components/Article";
-import Link from "next/link";
 
 interface PageProps {
   counter: number;
   articles: ArticleInList[];
 }
 
-export async function getStaticProps() {
-  try {
-    const data = await getDevArticles();
-    return {
-      props: {
-        articles: data
-          .filter((item: ArticleInList) => item.page_views_count >= 1500)
-          .sort(
-            (a: ArticleInList, b: ArticleInList) =>
-              b.page_views_count - a.page_views_count
-          ),
-      },
-    };
-  } catch (e) {
-    return {
-      props: {
-        counter: 3670,
-      },
-    };
-  }
-}
-
 const Home: NextPage<PageProps> = (props) => {
-  const experienceInYears =
-    NUM_TO_WORD[new Date().getFullYear() - 2018] || "decade";
+  const experienceInYears = "4";
   return (
     <>
       <MetaData />
@@ -48,7 +22,7 @@ const Home: NextPage<PageProps> = (props) => {
         <Section>
           <h1 className={"text-gray-100 text-3xl md:text-5xl overflow-hidden"}>
             Hi, I&apos;m{" "}
-            {"Anshuman".split("").map((char, index) => (
+            {"Marie".split("").map((char, index) => (
               <motion.p
                 key={char + index}
                 className={"inline-block text-yellow-400"}
@@ -99,24 +73,6 @@ const Home: NextPage<PageProps> = (props) => {
               <ExternalLink key={exp.url} {...exp} />
             ))}
           </div>
-        </Section>
-        <Section className="flex flex-col">
-          <SectionHeading>Popular articles</SectionHeading>
-          <p className="text-lg">
-            I&apos;m big on technical writing and developer advocacy. I
-            regularly publish articles on DEV and Medium about things I learned
-            or want to teach. You can read some of my popular articles below.
-          </p>
-          <div>
-            {props.articles.map((article) => (
-              <Article key={article.id} article={article} />
-            ))}
-          </div>
-          <Link passHref href={"/articles"}>
-            <a className="self-center p-2 px-4 text-md bg-slate-800 rounded text-yellow-400 hover:underline">
-              View More
-            </a>
-          </Link>
         </Section>
       </motion.main>
       <Footer />

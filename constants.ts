@@ -31,26 +31,13 @@ export const contacts: LinkInformationType[] = [
     sameTab: true,
   },
   {
-    name: "Blog",
-    url: "/blog",
-    sameTab: true,
-  },
-  {
     name: "Email",
     url: "mailto:hi@theanshuman.dev",
     sameTab: true,
   },
   {
-    name: "Newsletter",
-    url: "https://www.getrevue.co/profile/anshuman_bhardwaj",
-  },
-  {
-    name: "DEV",
-    url: "https://dev.to/anshuman_bhardwaj",
-  },
-  {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/itsanshuman",
+    url: "https://www.linkedin.com/in/mariebie/",
   },
   {
     name: "Github",
@@ -61,17 +48,10 @@ export const contacts: LinkInformationType[] = [
     url: "https://twitter.com/sun_anshuman",
   },
   {
-    name: "Hashnode",
-    url: "https://blog.theanshuman.dev",
-  },
-  {
     name: "Medium",
     url: "https://anshuman-bhardwaj.medium.com",
   },
-  {
-    name: "Youtube",
-    url: "https://www.youtube.com/c/AnshumanBhardwaj",
-  },
+
   {
     name: "Instagram",
     url: "https://instagram.com/sun_anshuman",
@@ -164,19 +144,4 @@ export const hover: { [key: string]: VariantLabels | TargetAndTransition } = {
   others: {
     scale: 1.05,
   },
-};
-
-export const DEV_API = {
-  key: process.env.DEV_API_KEY as string,
-  baseUrl: "https://dev.to/api",
-  username: process.env.DEV_USERNAME as string,
-};
-
-export const NUM_TO_WORD: { [k: number]: string } = {
-  4: "four",
-  5: "five",
-  6: "six",
-  7: "seven",
-  8: "eight",
-  9: "nine",
 };

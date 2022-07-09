@@ -9,10 +9,6 @@ const NavLinks = [
     name: "Home",
   },
   {
-    url: "/articles",
-    name: "Articles",
-  },
-  {
     url: "/services",
     name: "Services",
   },
@@ -39,7 +35,7 @@ export default function NavBar() {
             "hidden self-start text-yellow-400 lg:inline-block text-3xl"
           }
         >
-          Anshuman Bhardwaj
+          Marie Bidenkapp
         </h2>
         <div className="w-full sm:w-auto flex flex-row justify-between mx-auto sm:justify-start lg:mr-0 lg:ml-16">
           {NavLinks.map((item) => (

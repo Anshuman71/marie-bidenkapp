@@ -7,12 +7,12 @@ const DEFAULT_KEYWORDS =
   "sun_anshuman, anshuman_bhardwaj, anshuman-bhardwaj, Anshuman Bhardwaj Canoo,  Collegebasket, Keshav Mahavidyalaya, Delhi University, India";
 
 export default function MetaData({
-  title = "Anshuman Bhardwaj",
+  title = "Marie Bidenkapp",
   description = DEFAULT_DESCRIPTION,
   keywords = "",
   canonicalLink = "",
   readingTime = 2,
-  imageUrl = "https://theanshuman.dev/me.jpeg",
+  imageUrl = "/me.jpeg",
 }) {
   return (
     <Head>
@@ -41,11 +41,7 @@ export default function MetaData({
       <meta property="twitter:image:src" content={imageUrl} />
       <meta name="twitter:label1" content="Est. reading time" />
       <meta name="twitter:data1" content={`${readingTime} minutes`} />
-      <link
-        rel="icon"
-        type="image/jpeg"
-        href="https://theanshuman.dev/icon.jpeg"
-      />
+      <link rel="icon" type="image/jpeg" href="/icon.jpeg" />
       {canonicalLink && <link rel="canonical" href={canonicalLink} />}
     </Head>
   );
