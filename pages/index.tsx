@@ -36,32 +36,20 @@ const Home: NextPage<PageProps> = (props) => {
           </h1>
           <p className={"text-gray-200 text-lg mt-4 leading-loose"}>
             {" "}
-            I&apos;m a creative Software Engineer with more than{" "}
-            <b>{experienceInYears}</b> years of experience in software
-            development ranging from being an <i>Engineering Manager</i> to
-            developing a Full Stack application on my own. I help companies
-            create valuable software and reach business goals.
-            <br />
-            Some examples of my contribution:
+            Some facts about me:
             <ul className="pl-10">
               <li className="list-disc">
-                Spearheaded effort on Over-the-Air updates and internal fleet
-                manager at Canoo, developing React and Next.js web application
+                I live in a small town near Frankfurt, Germany
               </li>
               <li className="list-disc">
-                Delivering the &ldquo;Pre-order&rdquo; landing page section and
-                payment integration for Canoo Pickup truck under a tight
-                deadline
+                I have a vocational education as a multi-lingual secretary
               </li>
               <li className="list-disc">
-                Led the mobile app development as a Product Engineer at
-                Delightree using React Native
+                I went to Australia for a one year Working Holiday
               </li>
               <li className="list-disc">
-                Designing and developing features for the mobile application
-                using ReactNative, React-navigation, and Firebase, along with
-                writing performant cloud functions for backend tasks as a
-                Product owner at Jynx.
+                I graduated my Abitur (A-Levels) and studied 2 semesters of
+                Linguistics
               </li>
             </ul>
           </p>
